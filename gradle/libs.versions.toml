@@ -2,7 +2,7 @@
 agp = "8.7.1"
 kotlin = "2.0.0"
 coreKtx = "1.13.1"
-splash = "1.0.0"
+splash = "1.0.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -13,31 +13,54 @@ hilt = "2.51.1"
 hiltNavComp = "1.2.0"
 retrofit = "2.11.0"
 glide = "2.4.1"
-dataStoreCore = "1.1.1"
+dataStore = "1.1.1"
+accompanist = "0.36.0"
+gms = "21.3.0"
+mockito = "5.14.2"
+mockitoKotlin = "5.4.0"
+coreTest = "2.2.0"
+coroutineTest = "1.9.0"
+junitJupiter = "5.10.0"
+junitVintage = "5.11.2"
+junitKtx = "1.2.1"
+uiTextGoogleFonts = "1.7.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash" }
+
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+junit-vintage = { group = "org.junit.vintage", name = "junit-vintage-engine", version.ref = "junitVintage" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-core-test = { group = "androidx.arch.core", name = "core-testing", version.ref = "coreTest" }
+mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockitoKotlin" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+kotlin-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutineTest" }
+junit5-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junitJupiter" }
+junit5-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junitJupiter" }
+
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-androidx-datastore = { group = "androidx.datastore", name = "datastore-preferences-core", version.ref = "dataStoreCore" }
+androidx-datastore = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavComp" }
 retrofit-android = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 glide-android = { group = "com.github.skydoves", name = "landscapist-glide", version.ref = "glide" }
+androidx-accompanist = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }
+android-gms = { group = "com.google.android.gms", name = "play-services-location", version.ref = "gms" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
+androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
 
 
 [plugins]

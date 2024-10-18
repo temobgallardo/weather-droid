@@ -30,11 +30,11 @@ android {
 		}
 	}
 	compileOptions {
-		sourceCompatibility = JavaVersion.VERSION_1_8
-		targetCompatibility = JavaVersion.VERSION_1_8
+		sourceCompatibility = JavaVersion.VERSION_17
+		targetCompatibility = JavaVersion.VERSION_17
 	}
 	kotlinOptions {
-		jvmTarget = "1.8"
+		jvmTarget = "17"
 	}
 	buildFeatures {
 		compose = true
@@ -57,7 +57,18 @@ dependencies {
 	implementation(libs.retrofit.android)
 	implementation(libs.glide.android)
 	implementation(libs.gson.converter)
+	implementation(libs.androidx.accompanist)
+	implementation(libs.android.gms)
+	implementation(libs.androidx.junit.ktx)
+	implementation(libs.androidx.ui.text.google.fonts)
 	testImplementation(libs.junit)
+//	testImplementation(libs.junit.vintage)
+	testImplementation(libs.mockito)
+	testImplementation(libs.mockito.kotlin)
+	testImplementation(libs.androidx.core.test)
+	testImplementation(libs.kotlin.coroutines.test)
+//	testImplementation(libs.junit5.jupiter.api)
+//	testImplementation(libs.junit5.jupiter.engine)
 	androidTestImplementation(libs.androidx.junit)
 	androidTestImplementation(libs.androidx.espresso.core)
 	androidTestImplementation(platform(libs.androidx.compose.bom))

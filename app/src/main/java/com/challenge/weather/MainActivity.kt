@@ -22,11 +22,11 @@ class MainActivity : ComponentActivity() {
 		setContent {
 			WeatherTheme {
 				Surface {
-					Scaffold {
+					Scaffold { safePadding ->
 						WeatherView(
 							modifier = Modifier
 								.fillMaxSize()
-								.padding(it)
+								.padding(safePadding)
 						)
 					}
 				}
