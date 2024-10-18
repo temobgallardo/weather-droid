@@ -62,13 +62,16 @@ dependencies {
 	implementation(libs.androidx.junit.ktx)
 	implementation(libs.androidx.ui.text.google.fonts)
 	testImplementation(libs.junit)
-//	testImplementation(libs.junit.vintage)
 	testImplementation(libs.mockito)
+	androidTestImplementation(libs.mockito)
+	androidTestImplementation(libs.mockito.android)
 	testImplementation(libs.mockito.kotlin)
+	androidTestImplementation(libs.mockito.kotlin)
 	testImplementation(libs.androidx.core.test)
 	testImplementation(libs.kotlin.coroutines.test)
-//	testImplementation(libs.junit5.jupiter.api)
-//	testImplementation(libs.junit5.jupiter.engine)
+	androidTestImplementation(libs.kotlin.coroutines.test)
+	androidTestImplementation(libs.androidx.hilt.test)
+	kapt(libs.kapt.android.hilt.test)
 	androidTestImplementation(libs.androidx.junit)
 	androidTestImplementation(libs.androidx.espresso.core)
 	androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -76,7 +79,12 @@ dependencies {
 	debugImplementation(libs.androidx.ui.tooling)
 	debugImplementation(libs.androidx.ui.test.manifest)
 	kapt(libs.hilt.android.compiler)
+//	testImplementation(kotlin("test"))
 }
+//
+//tasks.test {
+//	useJUnitPlatform()
+//}
 
 // Allow references to generated code
 kapt {

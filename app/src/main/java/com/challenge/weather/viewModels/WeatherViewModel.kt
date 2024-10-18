@@ -15,10 +15,11 @@ import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import javax.inject.Inject
 
+// Made the injected services public because Hill needs to access them on the Unit Tests
 @HiltViewModel
 class WeatherViewModel @Inject constructor(
-	private val weatherRepository: IWeatherRepository,
-	private val locationService: ILocationService
+	val weatherRepository: IWeatherRepository,
+	val locationService: ILocationService
 ) :
 	ViewModel() {
 	private val _searchTerm = mutableStateOf("")
@@ -55,7 +56,7 @@ class WeatherViewModel @Inject constructor(
 	}
 
 	fun getWeatherByUsersLocation() {
-		viewModelScope.launch(Dispatchers.IO) {
+		viewModelScope.launch {
 			locationService.getCurrentCityName().collectLatest {
 				updateSearchTerm(it)
 				getWeather()
